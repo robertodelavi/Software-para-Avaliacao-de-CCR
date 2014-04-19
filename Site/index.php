@@ -19,7 +19,7 @@ que esteja apto a ser entregue a um potencial cliente, sendo esse capaz de utili
 		<div id = "logo"></div>
 		
 		<ul>
-			<li> <a href="teste.php">CADASTRO DE ENQUETES</a> </li>
+			<li> <a href="gerar_enquete.php">NOVA ENQUETE</a> </li>
 			<li> <a href="teste.php">CADASTRO DE ENQUETES</a> </li>
 			<li> <a href="teste.php">CADASTRO DE ENQUETES</a> </li>
 			<li> <a href="teste.php">CADASTRO DE ENQUETES</a> </li>
@@ -27,7 +27,6 @@ que esteja apto a ser entregue a um potencial cliente, sendo esse capaz de utili
 	</div>
 		
 	<div id="body_background">
-	<div style="height:750px;"></div>
 	</div>		
 		
 		

@@ -15,6 +15,7 @@ body{
 	width: 850px;
 	margin-top: 0px;
 	overflow: auto;
+	min-height: 459px;
 }
 
 #logo{
@@ -34,13 +35,39 @@ body{
 	background-color: #DCDCDC;
 }
 
-#option{
-	width: 300px;
+#question, #dp{
+	float:left;
+	width: 760px;
+	margin-left: 17px;
+	background-color: #F5F5F5;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+}
+
+#dp{
+	display: none;
+}
+
+#option, #prof, #disc{
+	float:left;
+	width: 200px;
 	font-family: Arial;
 	font-size: 16px;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-top: 20px;
 	color: #000;
+}
+
+#prof{
+	margin-left: 240px;
+}
+
+#item{
+	width: 760px;
+	margin-left: 17px;
+	margin-top: 10px;
 }
 
 #title{
@@ -55,7 +82,8 @@ body{
 	font-weight: bold;
 }
 
-#text, #select, #field{
+#text, #select, #field, #text-question, #disciplina, #professor{
+	float:left;
 	width: 750px;
 	height: 30px;
 	margin-top: 20px;
@@ -66,8 +94,26 @@ body{
 	font-size: 16px;
 }
 
-#select{
+#disciplina, #professor{
+	width: 300px;
+	margin-left: 7px;
 	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#professor{
+	margin-left: 140px;
+}
+
+#text-question{
+	margin-left: 7px;
+	width: 740px;
+}
+
+#select{
+	width: 740px;
+	margin-top: 10px;
+	margin-left: 7px;
 }	
 
 #field{
@@ -107,7 +153,6 @@ body{
 	bottom: 0px;
 	right: 0px;
 	left: 0px;
-	margin-top: 0px;	
 }	
 
 
@@ -152,26 +197,32 @@ body{
 	font-size: 13px;
 }
 
-#question_right, #button{
+#button-right, #button-question, #button, #concluir{
 	width: 200px;
-	margin-top: 30px;
+	margin-top: 10px;
 	margin-left: 20px;
 	height: 30px;
 	font-size: 14px;
-	font-family: Verdana;
+	font-family: Helvetica, Arial;
 	line-height: 30px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 	clear: left;
-	background-color: #008B00;
-	color: #DCDCDC;
+	background-color: #81d41d;
+	color: #000;
 	margin-bottom: 20px;
 }
 
-#question_right{
+#button-question, #concluir{
 	margin-right: 20px;
 	margin-left: 70%;
 	margin-bottom: 10px;
+}
+
+#button-right{
+	margin-right: 20px;
+	margin-left: 250px;
+	width: 300px;
 }
 
 #image{
