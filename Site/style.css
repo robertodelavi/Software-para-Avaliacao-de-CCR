@@ -18,25 +18,12 @@ body{
 }
 
 #logo{
-	width: 350px;
-	height: 124px;
-	float: left;
-	margin-left: 50px;
-	background:#D3D3D3 url(Images/logoCC.png);
-	margin-top: 25px;
-}
-
-#cssmenu{
-	width: 100%;
-	height: 240px;
-	background-color: #D3D3D3;
-	top: 0px;
-}
-
-#menu{
-	width: 100%;
-	height: 50px;
-	background: #00FF00;
+	width: 276px;
+	height: 100px;
+	float: right;
+	margin-right: 50px;
+	background: url(Images/logoCC.png);
+	margin-top: 0px;
 }
 
 #enquete{
@@ -113,34 +100,24 @@ body{
 	text-decoration:underline;
 }
 
-#background-table{
-	float: left;
-	width: 130px;
-	background-color: #fff;
-	margin-left: 12px;
-	margin-top: 10px;
-	height: 13px;
-	padding-bottom: 20px;
-	padding-right: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	font-size: 13px;
-	font-family: Verdana;
-	text-align: center;
-	padding-top: 10px;
-}	
-
 #footer{
-	float: left;
 	width: 100%;
 	height: 100px;
-	background:#D3D3D3;
+	background:#F5F5F5;
 	bottom: 0px;
-	padding: 20px 0;
 	right: 0px;
 	left: 0px;
-	margin-top: 0px;
+	margin-top: 0px;	
 }	
+
+
+#footer_bar{
+	background-color: #81d41d;
+	width: 100%;
+	height: 8px;
+	width: 850px;
+	margin: auto;
+}
 
 #login{
 	float: left;
@@ -205,18 +182,25 @@ body{
 	height: 250px;
 }
 
-ul {
-	float:left;
-	margin: 0; 
-	margin-top: 10px;
-	padding: 0px 0px 0; 
-	line-height: 20%; 
-	height: 40px;
+
+#menu{
 	width: 100%;
-	font: normal .8em/1.5em Arial, Helvetica, sans-serif;  
+	height: 100px;
+	background-color: #F5F5F5;
+	border-bottom: 8px solid #81d41d;
 }
 
-li {
+#menu ul {
+	float:left;
+	margin-top: 50px;
+	margin-left: 30px;
+	padding: 0px 0px 0; 
+	line-height: 20%; 
+	font: 0.8em/1.5em Helvetica,Arial,sans-serif;
+}
+
+
+#menu ul li {
 	margin: 0 5px; 
 	padding: 0 0 8px; 
 	float: left; 
@@ -224,31 +208,7 @@ li {
 	list-style: none; 
 }
 
-li.loginSignup{
-	margin: 0 5px; 
-	padding: 0 0 8px; 
-	float: right; 
-	position: relative; 
-	list-style: none; 
-}
-
-ul ul li:hover a,
-li:hover li a {
-	background: none; 
-	border: none; 
-	color: #006400; 
-}
-
-ul ul a:hover {
-	background: #006400 !important; 
-	color: #fff !important; 
-}
-
-li:hover > ul {
-	display: block;
-}
-
-ul ul {
+#menu ul ul {
 	display: none; 
 	margin: 0; 
 	padding: 0; 
@@ -261,7 +221,7 @@ ul ul {
 	box-shadow: 0 1px 3px rgba(0,0,0, .3);
 }
 
-ul ul li {
+#menu ul ul li {
 	float: left;
 	width: 300px;
 	height: 300px;
@@ -270,12 +230,24 @@ ul ul li {
 	padding: 3px; 
 }
 
-ul ul a {
+#menu ul ul a {
 	font-weight: normal; 
 	text-shadow: 0 1px 0 #fff; 
 }
 
-ul:after {
+#menu a:link, a:visited{
+	color: #000;
+	text-decoration: none;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+#menu a:hover,a:active{
+	color:#81d41d;
+	text-decoration:none;
+}
+
+#menu ul:after {
 	content: '.'; 
 	display: block; 
 	clear: both; 
@@ -284,7 +256,7 @@ ul:after {
 	height: 0;
 }
 
-* html #cssmenu  ul {
+* html #menu  ul {
 	height: 1%;
 }
 
