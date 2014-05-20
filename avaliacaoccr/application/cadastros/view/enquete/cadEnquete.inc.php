@@ -55,20 +55,25 @@
 				echo "<div style='clear: both;'></div>";
 				
 				echo "<div class='coluna' style='margin-right: 23px; margin-left:0px;'>";
-					echo "<input name='per_desc' id='per_desc_uma_resposta' type='text' size='61' style='text-transform: uppercase;' />&nbsp;&nbsp;&nbsp;";
-					echo "<a onclick='mostra_alter();'><img src=\"application/images/confirmarpequeno.png\" /></a>&nbsp;&nbsp;";
-					echo "<input type=\"image\" name=\"btn_opentextbox\" src=\"application/images/delete.png\" value=\"Delete\" />&nbsp;&nbsp;&nbsp;";
-					echo "<input type=\"image\" name=\"btn_opentextbox\" src=\"application/images/copy.png\" value=\"Clonar\" />";
+
+					echo "<input name='per_desc_uma_resposta_".$j."' id='per_desc_uma_resposta_".$j."' type='text' size='61' style='text-transform: uppercase;' />&nbsp;&nbsp;&nbsp;";
+					
+					echo "<a onclick='mostra_alter(".$j.");'><img src='application/images/mais.png' title='Inserir alternativa' /></a>&nbsp;&nbsp;";
+					
+					echo "<a onclick='delete_pergunta(".$j.");' ><img src='application/images/delete.png' style='cursor:pointer;' ></a>";
+
 				echo "</div>";
 					echo "<div class='linha'   >";
 					echo "<div style='clear: both;'></div>";
 					//ALTERNATIVAS
 					for ($i = 1; $i <= 50; $i++) {
 							echo "<div style='clear: both;'></div>";
-							echo "<div class='coluna' id='cab_alter".$i."' style='display: none;' > Alternativa ".$i."</div>";
+							echo "<div class='coluna' id='cab_alter_".$j."_".$i."' style='display: none;' > Alternativa ".$i."</div>";
 							echo "<div style='clear: both;'></div>";
-							echo "<div class='coluna' > <input type='text' name='alter".$i."' id='alter".$i."' style='display: none;'> </div>";
-							echo "<a onclick='mostra_alter();'><img src=\"application/images/mais.png\" id='btn_mais".$i."'  style='display: none;' /></a>&nbsp;&nbsp;";
+							echo "<div class='coluna' > 
+									<input type='text' name='alter_".$j."_".$i."' id='alter_".$j."_".$i."' style='display: none;'> 
+								 </div>";
+							echo "<a onclick='mostra_alter(".$j.");'><img src='application/images/mais.png' id='btn_mais_".$j."_".$i."'  style='display: none;' /></a>";
 					}
 				echo "</div>";
 				echo "<div style='clear: both;'></div>";
@@ -114,11 +119,25 @@
 	var indice_texto = 0;
 	var indice_alter = 1;
 	
-	function mostra_alter() {		
-		document.getElementById("cab_alter"+indice_alter).style.display = "block";	
-		document.getElementById("alter"+indice_alter).style.display     = "block";
-		document.getElementById("btn_mais"+indice_alter).style.display  = "block";	
+	function mostra_alter(indice_pergunta) {		
+		document.getElementById("cab_alter_"+indice_pergunta+"_"+indice_alter).style.display = "block";	
+		document.getElementById("alter_"+indice_pergunta+"_"+indice_alter).style.display = "block";
+		document.getElementById("btn_mais_"+indice_pergunta+"_"+indice_alter).style.display  = "block";	
 		indice_alter++;
+	}
+	
+	function delete_pergunta(indice_pergunta){
+		var i;
+		document.getElementById("per_desc_uma_resposta_"+indice_pergunta).style.display = "none";						
+		// excluir cabeçalho e botões....
+		// excluindo alternativas da pergunta
+		for(i = 1; i<= 20; i++){
+			document.getElementById("cab_alter_"+indice_pergunta+"_"+i).style.display = "none";				
+			document.getElementById("alter_"+indice_pergunta+"_"+i).value = "";	
+			document.getElementById("alter_"+indice_pergunta+"_"+i).style.display = "none";	
+			document.getElementById("btn_mais_"+indice_pergunta+"_"+i).style.display = "none";	
+			indice_alter--;
+		}
 	}
 	
 	function ativa_tipo_pergunta(){
